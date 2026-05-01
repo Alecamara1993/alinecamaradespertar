@@ -295,8 +295,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.05);paddin
 .fcopy{font-size:12px;color:rgba(255,255,255,.18)}
 .fig{font-size:12px;color:var(--orange);text-decoration:none}
 
-@media(max-width:768px){
-  nav{padding:0 20px;height:56px}
+
   .nav-links{display:none}
   .hero{padding:90px 24px 60px}
   .hero-stats{margin-top:48px;padding-top:32px}
@@ -313,9 +312,228 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.05);paddin
   .fbot{flex-direction:column;text-align:center}
   .strip{padding:44px 24px}
 }
-@media(max-width:480px){
-  .cards-grid{grid-template-columns:1fr}
+
 }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — Desktop first
+   Breakpoints:
+   xl  : > 1200px  (large desktop)
+   lg  : 1024px    (desktop/laptop)
+   md  : 768px     (tablet landscape)
+   sm  : 600px     (tablet portrait)
+   xs  : 400px     (mobile)
+══════════════════════════════════════════ */
+
+/* LARGE DESKTOP */
+@media(min-width:1200px){
+  .container{max-width:1100px}
+  .cards-grid{grid-template-columns:repeat(3,1fr)}
+  .about-grid{grid-template-columns:400px 1fr;gap:100px}
+}
+
+/* TABLET LANDSCAPE / SMALL DESKTOP */
+@media(max-width:1024px){
+  nav{padding:0 32px}
+  .hero{padding:110px 32px 72px}
+  .about{padding:90px 32px}
+  .about-grid{grid-template-columns:280px 1fr;gap:60px}
+  .courses{padding:90px 32px}
+  .cards-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .ccard{padding:36px 28px}
+  .lead{padding:90px 32px}
+  .testi{padding:90px 32px}
+  footer{padding:60px 32px 32px}
+  .ftop{gap:40px}
+}
+
+/* TABLET PORTRAIT */
+@media(max-width:768px){
+  /* NAV */
+  nav{padding:0 20px;height:56px}
+  .nav-links{display:none}
+  .nav-logo-name{font-size:15px;letter-spacing:3px}
+
+  /* HERO */
+  .hero{padding:88px 24px 56px}
+  .hero-logo{width:80px;height:80px;margin-bottom:24px}
+  .hero h1{font-size:38px;letter-spacing:-0.5px}
+  .hero-desc{font-size:14px;margin-bottom:36px}
+  .btn-fire{padding:14px 32px;font-size:11px}
+  .btn-border{padding:14px 24px;font-size:11px}
+  .hero-stats{
+    margin-top:44px;padding-top:32px;
+    max-width:100%;
+  }
+  .stat{padding:0 12px}
+  .stat-n{font-size:28px}
+  .stat-l{font-size:9px}
+
+  /* ABOUT */
+  .about{padding:72px 24px}
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+  .about-frame{
+    width:280px;
+    aspect-ratio:3/4;
+    margin:0 auto;
+  }
+  .eyebrow{justify-content:center}
+  .section-h2{font-size:34px}
+  .tags{justify-content:center}
+
+  /* COURSES */
+  .courses{padding:72px 24px}
+  .sec-title{font-size:34px}
+  .cards-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+  .card-title{font-size:17px}
+  .card-desc{font-size:11px}
+
+  /* STRIP */
+  .strip{padding:44px 24px}
+  .strip-quote{font-size:20px}
+
+  /* LEAD */
+  .lead{padding:72px 24px}
+  .lead-h2{font-size:32px}
+  .lrow{grid-template-columns:1fr}
+  .perks{gap:14px;flex-direction:column;align-items:center}
+
+  /* TESTIMONIALS */
+  .testi{padding:72px 24px}
+  .tgrid{grid-template-columns:1fr;gap:1px}
+
+  /* FOOTER */
+  footer{padding:52px 24px 32px}
+  .ftop{grid-template-columns:1fr;gap:32px}
+  .fbot{flex-direction:column;text-align:center;gap:8px}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  /* NAV */
+  nav{height:52px;padding:0 16px}
+  .nav-logo-name{font-size:14px;letter-spacing:2px}
+  .nav-cta{padding:8px 16px;font-size:10px;letter-spacing:1px}
+
+  /* HERO */
+  .hero{padding:80px 16px 48px}
+  .hero-pill{font-size:9px;letter-spacing:2px;padding:7px 14px}
+  .hero h1{font-size:32px;line-height:1.05}
+  .hero-desc{font-size:13px;line-height:1.75}
+  .hero-btns{flex-direction:column;align-items:center;gap:10px;width:100%}
+  .btn-fire,.btn-border{width:100%;max-width:320px;text-align:center;padding:15px 20px}
+  .hero-stats{
+    flex-wrap:wrap;
+    margin-top:36px;padding-top:24px;
+  }
+  .stat{
+    flex:0 0 50%;
+    padding:12px 0;
+    border-left:none !important;
+  }
+  .stat:nth-child(2n){border-left:1px solid rgba(255,255,255,.06) !important}
+  .stat:nth-child(3),.stat:nth-child(4){border-top:1px solid rgba(255,255,255,.06)}
+  .stat-n{font-size:26px}
+
+  /* ABOUT */
+  .about{padding:56px 16px}
+  .about-grid{gap:32px}
+  .about-frame{width:240px}
+  .section-h2{font-size:28px}
+  .about-p{font-size:14px}
+  .frame-name{font-size:18px}
+
+  /* COURSES */
+  .courses{padding:56px 16px}
+  .sec-header,.sec-hdr{margin-bottom:40px}
+  .sec-title{font-size:28px}
+  .sec-sub{font-size:13px}
+  .cards-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+    max-width:360px;
+    margin:0 auto;
+  }
+  .card{aspect-ratio:9/13}
+  .card-title{font-size:18px}
+  .card-body{padding:20px 16px 16px}
+
+  /* STRIP */
+  .strip{padding:40px 16px}
+  .strip-quote{font-size:18px;line-height:1.45}
+
+  /* LEAD */
+  .lead{padding:56px 16px}
+  .lead-h2{font-size:28px}
+  .lead-desc{font-size:13px}
+  .lform{max-width:100%}
+  .lform input{padding:14px 16px;font-size:13px}
+  .lbtn{font-size:11px;letter-spacing:1.5px;padding:15px}
+  .perks{gap:10px}
+  .perk{font-size:11px}
+
+  /* TESTIMONIALS */
+  .testi{padding:56px 16px}
+  .tcard{padding:28px 20px}
+  .ttext{font-size:13px}
+
+  /* FOOTER */
+  footer{padding:44px 16px 28px}
+  .flogo-name{font-size:16px}
+  .fcol a{font-size:13px}
+  .fcopy{font-size:11px}
+}
+
+/* EXTRA SMALL MOBILE */
+@media(max-width:380px){
+  .hero h1{font-size:27px}
+  .hero-pill{display:none}
+  .hero-logo{width:64px;height:64px}
+  .nav-cta{display:none}
+  .about-frame{width:200px}
+  .card{aspect-ratio:3/4}
+}
+
+
+/* HAMBURGER MENU */
+.nav-hamburger{
+  display:none;
+  flex-direction:column;gap:5px;cursor:pointer;padding:8px;
+  background:none;border:none;
+}
+.nav-hamburger span{
+  display:block;width:22px;height:2px;
+  background:var(--white);border-radius:2px;
+  transition:all .3s;
+}
+.nav-mobile{
+  display:none;
+  position:fixed;top:52px;left:0;right:0;z-index:299;
+  background:rgba(8,8,8,.98);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(200,24,10,.2);
+  padding:20px 24px 28px;
+  flex-direction:column;gap:0;
+}
+.nav-mobile.open{display:flex}
+.nav-mobile a{
+  color:rgba(255,255,255,.7);text-decoration:none;
+  font-size:14px;letter-spacing:1.5px;text-transform:uppercase;
+  padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);
+  transition:color .2s;
+}
+.nav-mobile a:last-child{border-bottom:none}
+.nav-mobile a:hover{color:var(--orange)}
+@media(max-width:768px){
+  .nav-hamburger{display:flex}
+}
+
 </style>
 </head>
 <body>
@@ -331,7 +549,17 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.05);paddin
     <a href="#lead">Lista VIP</a>
   </div>
   <a href="#lead" class="nav-cta">Quero começar</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+  <a href="#cursos" onclick="toggleMenu()">Cursos</a>
+  <a href="#lead" onclick="toggleMenu()">Lista VIP</a>
+  <a href="https://instagram.com/oficialalinecamara" target="_blank">Instagram</a>
+  <a href="https://www.youtube.com/@AlineCamaraDesperta" target="_blank">YouTube</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -561,5 +789,17 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   })
 });
 </script>
+
+<script>
+function toggleMenu(){
+  const m = document.getElementById('navMobile');
+  m.classList.toggle('open');
+}
+// Close menu on scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('navMobile').classList.remove('open');
+});
+</script>
+
 </body>
 </html>
